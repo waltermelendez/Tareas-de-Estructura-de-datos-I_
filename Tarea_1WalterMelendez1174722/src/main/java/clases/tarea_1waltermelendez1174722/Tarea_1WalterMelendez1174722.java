@@ -66,6 +66,6 @@ public class Tarea_1WalterMelendez1174722 {
         
         //Ejercicio Numero 2
         System.out.println("Ejercicio Numero 2");
-        
+        System.out.println("Prueba");
     }
 }
