@@ -11,7 +11,7 @@ public class Tarea_1WalterMelendez1174722 {
         int [] Notas=new int [10];
         Scanner Entrada= new Scanner (System.in);
         for (int i = 0; i < 10; i++) {
-            System.out.println("Diga una nota");
+            System.out.println("Diga una nota "+(i+1) );
             Notas[i]=Entrada.nextInt();
         }
         //Ordenamineto en for
@@ -19,11 +19,19 @@ public class Tarea_1WalterMelendez1174722 {
         int promedio=0;
         for (int i = 0; i < 10; i++) {
             for (int j = i+1; j < 10; j++) {
-                aux=Notas[j];
-                  Notas[j]=Notas[i];
-                  Notas[i]=aux;
+                if (Notas[j]<Notas[j+1]) {
+                    aux=Notas[j];
+                  Notas[j]=Notas[j+1];
+                  Notas[j+1]=aux;
+                }
+                
             }
         }
+        for (int i = 0; i < 10; i++) {
+            System.out.print(Notas[i]+", ");
+        }
+        System.out.println("En numero más alto es: "+Notas[0]);
+        System.out.println("El numero con la notas más baja es: "+Notas[9]);
         System.out.println("Promedio del ciclo For");
         for (int i = 0; i < 10; i++) {
             promedio=Notas[i]+promedio;
@@ -66,6 +74,6 @@ public class Tarea_1WalterMelendez1174722 {
         
         //Ejercicio Numero 2
         System.out.println("Ejercicio Numero 2");
-        
+        System.out.println("Prueba");
     }
 }
