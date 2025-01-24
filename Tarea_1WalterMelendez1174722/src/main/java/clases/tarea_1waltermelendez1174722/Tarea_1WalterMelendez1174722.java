@@ -8,25 +8,42 @@ public class Tarea_1WalterMelendez1174722 {
     public static void main(String[] args) {
         //Ejercercicio numero 1 con ciclo for
         System.out.println("Notas con ciclo For");
-        int [] Notas_f=new int [10];
+        int [] Notas=new int [10];
         Scanner Entrada= new Scanner (System.in);
         for (int i = 0; i < 10; i++) {
             System.out.println("Diga una nota");
-            Notas_f[i]=Entrada.nextInt();
+            Notas[i]=Entrada.nextInt();
         }
         //Ordenamineto en for
-        int aux=0;
+        int aux;
         int promedio=0;
         for (int i = 0; i < 10; i++) {
             for (int j = i+1; j < 10; j++) {
-                aux=Notas_f[j];
-                  Notas_f[j]=Notas_f[i];
-                  Notas_f[i]=aux;
+                aux=Notas[j];
+                  Notas[j]=Notas[i];
+                  Notas[i]=aux;
             }
         }
-        System.out.println("Promedio del ciiclo For");
+        System.out.println("Promedio del ciclo For");
         for (int i = 0; i < 10; i++) {
-            promedio=Notas_f[i]+promedio;
+            promedio=Notas[i]+promedio;
+        }
+        System.out.println("El promedio es "+promedio);
+        //Ejercicio numero 1 con while
+        System.out.println("Notas con ciclo while");
+        
+        int cont=0;
+        while (cont<10){
+            System.out.println("Diga una nota");
+        Notas[cont]=Entrada.nextInt();
+        cont++;
+        }
+        //Ordenamiento
+        cont=0;
+        //Promedio de while
+        while(cont<10){
+        promedio=Notas[cont]+promedio;
+        
         }
     }
 }
