@@ -35,7 +35,8 @@ public class Tarea_1WalterMelendez1174722 {
         for (int i = 0; i < 10; i++) {
             promedio=Notas[i]+promedio;
         }
-        System.out.println("El promedio es: "+(promedio/10));
+        promedio=promedio/10
+        System.out.println("El promedio es: "+(promedio));*/
         //Ejercicio numero 1 con while
         
         System.out.println("Notas con ciclo while");
@@ -48,8 +49,8 @@ public class Tarea_1WalterMelendez1174722 {
         }
         //Ordenamiento
         cont=0;
-        promedio=0;
-        int cont_aux=1;
+       int promediow=0;
+        int cont_aux=cont+1;
         while(cont<10){
         while(cont_aux<10){
             if (Notas[cont_aux]>Notas[cont]) {
@@ -62,21 +63,23 @@ public class Tarea_1WalterMelendez1174722 {
             
         }
             cont++;
-            cont_aux=0;
+            cont_aux=cont+1;
         }
-        System.out.println("La nota mas alta es: "+Notas[9]);
-        System.out.println("La nota mas baja es: "+Notas[0]);
+        System.out.println("La nota mas alta es: "+Notas[0]);
+        System.out.println("La nota mas baja es: "+Notas[9]);
         for (int i = 0; i < 10; i++) {
                 System.out.print(Notas[i]+", ");
             }
         //Promedio de while
+        cont=0;
         while(cont<10){
-        promedio=Notas[cont]+promedio;
+        promediow=Notas[cont]+promediow;
         cont++;
         }
-        System.out.println("El promedio es de: "+promedio/10);*/
+        promediow=promediow/10;
+        System.out.println("El promedio es de: "+(promediow));
         //Ejercicio de Notas con do-while
-       int cont=0;
+       cont=0;
         System.out.println("");
         System.out.println("Notas con ciclo do--while");
         do {
@@ -85,7 +88,21 @@ public class Tarea_1WalterMelendez1174722 {
             cont++;
         } while (cont<10);
         //Ordenamiento
-        
+        cont=0;
+         cont_aux=cont+1;
+        do {
+            do {
+                if (Notas[cont_aux]<Notas[cont]) {
+                aux=Notas[cont_aux];
+                  Notas[cont_aux]=Notas[cont];
+                  Notas[cont]=aux;
+            }else{
+                cont_aux++;
+            }
+            } while (cont_aux<10);
+            cont++;
+            cont_aux=cont+1;
+        } while (cont<10);
         //Promedio de ciclo do--while
         cont=0;
         promedio=0;
