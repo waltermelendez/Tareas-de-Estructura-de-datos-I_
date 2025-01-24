@@ -40,10 +40,32 @@ public class Tarea_1WalterMelendez1174722 {
         }
         //Ordenamiento
         cont=0;
+        promedio=0;
         //Promedio de while
         while(cont<10){
         promedio=Notas[cont]+promedio;
         
         }
+        //Ejercicio de Notas con do-while
+        cont=0;
+        System.out.println("Notas con ciclo do--while");
+        do {
+            System.out.println("Diga un numero");
+            Notas[cont]=Entrada.nextInt();
+            cont++;
+        } while (cont<10);
+        //Ordenamiento
+        
+        //Promedio de ciclo do--while
+        cont=0;
+        promedio=0;
+        do {
+           promedio=promedio+Notas[cont];
+           cont++;
+        } while (cont<10);
+        
+        //Ejercicio Numero 2
+        System.out.println("Ejercicio Numero 2");
+        
     }
 }
