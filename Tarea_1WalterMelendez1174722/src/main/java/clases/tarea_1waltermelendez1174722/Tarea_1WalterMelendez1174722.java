@@ -83,6 +83,7 @@ public class Tarea_1WalterMelendez1174722 {
         //Ejercicio de Notas con do-while
       int contar=0;
       int contar_aux=0;
+      int auxi=0;
         System.out.println("");
         System.out.println("Notas con ciclo do--while");
         do {
@@ -92,20 +93,22 @@ public class Tarea_1WalterMelendez1174722 {
         } while (contar<10);
         //Ordenamiento
         contar=0;
-         contar_aux=contar+1;
+        int [] a= new int [5];
+        
+         contar_aux=1;
         do {
             do {
-                if (Notas[contar_aux]<Notas[contar]) {
-                aux=Notas[contar_aux];
+                if (Notas[contar]<Notas[contar_aux]) {
+                auxi=Notas[contar_aux];
                   Notas[contar_aux]=Notas[contar];
-                  Notas[contar]=aux;
+                  Notas[contar]=auxi;
             }else{
                 contar_aux++;
             }
-            } while (contar_aux<10);
+            } while (contar_aux<9);
             contar++;
             contar_aux=contar+1;
-        } while (contar<10);
+        } while (contar<9);
         
         //Promedio de ciclo do--while
         contar=0;
@@ -117,8 +120,8 @@ public class Tarea_1WalterMelendez1174722 {
         
         System.out.println("La nota mas alta es: "+Notas[0]);
         System.out.println("La nota mas baja es: "+Notas[9]);
-        
-        System.out.println("El promedio es de: "+(promedio/10));
+        promedio_d=promedio_d/10;
+        System.out.println("El promedio es de: "+promedio_d);
         //Ejercicio Numero 2
         
         System.out.println("Ejercicio Numero 2");
