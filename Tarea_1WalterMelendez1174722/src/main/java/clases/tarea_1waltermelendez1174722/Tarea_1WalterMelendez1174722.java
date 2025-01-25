@@ -81,7 +81,7 @@ public class Tarea_1WalterMelendez1174722 {
         
         
         //Ejercicio de Notas con do-while
-      int contar=0;
+     /* int contar=0;
       int contar_aux=0;
       int auxi=0;
         System.out.println("");
@@ -123,8 +123,51 @@ public class Tarea_1WalterMelendez1174722 {
         promedio_d=promedio_d/10;
         System.out.println("El promedio es de: "+promedio_d);
         //Ejercicio Numero 2
-        
+        */
         System.out.println("Ejercicio Numero 2");
-        System.out.println("Prueba");
+        int [] numero = new int [5];
+        
+        int posA=0;
+        int posB=0;
+        int menos=5;
+        boolean respuesta= true;
+        String letra="S";
+        numero[0]=1;
+        numero[1]=12;
+        numero[2]=23;
+        numero[3]=34;
+        numero[4]=34;
+        do {
+            
+            if (letra=="S") {
+                for (int i = 0; i < 5; i++) {
+                    for (int j = i+1; j < 5; j++) {
+                        if (numero[j]==numero[i]) {
+                            posA=j;
+                            posB=i;
+                            break;
+                        }
+                    }
+                    
+                }
+                if (posA==0&&posB==0) {
+                    System.out.println("No hay numero iguales en el arreglo");    
+                }else{
+                    menos=menos-2;
+                    int [] numero_nuevo=new int [menos];
+                for (int i = 0; i < menos; i++) {
+                    numero_nuevo[i]=numero[i];
+                }
+                    for (int i = 0; i < menos; i++) {
+                        System.out.print(numero_nuevo[i]+" ,");
+                    }
+                }
+                
+            }else if(letra=="N"){
+                System.out.println("Saliendo.....");
+                respuesta=false;
+            }
+        } while (respuesta);
+       
     }
 }
