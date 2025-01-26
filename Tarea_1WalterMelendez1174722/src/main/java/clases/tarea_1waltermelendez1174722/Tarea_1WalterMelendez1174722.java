@@ -126,31 +126,70 @@ public class Tarea_1WalterMelendez1174722 {
         //Ejercicio Numero 2
         */
         System.out.println("Ejercicio Numero 2");
-        int [] numero = new int [5];
+        
         int cantidad=10;
-       ArrayList <Integer> nue=new ArrayList<>(cantidad);//Se debe de usar array list debido a que los arrays simples porque tiene tama;o fijo.
+       ArrayList <Integer> numeros=new ArrayList<>(cantidad);//Se debe de usar array list debido a que los arrays simples porque tiene tama;o fijo.
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Diga un numero"+(i+1));
+            numeros.add(Entrada.nextInt());
+        }
         int posA=0;
         int posB=0;
-        
         boolean respuesta= true;
-        String letra="S";
-        numero[0]=1;
-        numero[1]=12;
-        numero[2]=23;
-        numero[3]=34;
-        numero[4]=34;
+        
+        char letra='S';
+        int remover=0;
         do {
-            if (letra=="S") {
-                for (int i = 0; i < cantidad; i++) {
-                    for (int j = 1; j < cantidad; j++) {
-                        if (nue.get(j)!=nue.get(i)) {
+            if (letra==('S')) {
+                for (int i = 0; i < cantidad; i++) {//Encontrar los numeros repetidos
+                    for (int j = 0; j < cantidad; j++) {
+                        if (numeros.get(i)==numeros.get(j)) {
+                            if (numeros.get(i)==posA||numeros.get(j)==posB) {
+                              break;//Para no contar dos veces los numeros ya encontrados.
+                            }else{
+                              posA=j;
+                            posB=i;
+                            remover=2;
+                            }
                             
-                        } else {
+                            
                         }
+                        
                     }
                 }
+                if (posA==0&&posB==0) {//Si no hay numeros repetidos
+                    System.out.println("No hay mas numeros que sean iguales");
+                    
+                }else{//Si hay numeros repetidos
+                 cantidad=cantidad-remover;
+               int[] copiar=new int [cantidad];
+                for (int i = 0; i < cantidad; i++) {
+                    if (numeros.get(i)==posA) {
+                     break;   
+                    }else if(numeros.get(i)==posB){
+                    break;
+                    }else{
+                    copiar[i]=numeros.get(i);
+                    }
+                }
+                numeros.clear();
+                
+                for (int i = 0; i < cantidad-1; i++) {
+                numeros.add(copiar[i]);
+                }
+               posA=0;
+               posB=0;
+                
+                }
+               
             }
+            if(letra=='N'){
+                System.out.println("Saliendo.....");
+                respuesta=false;
             
+            }
+            System.out.println("Quiere buscar mas numeros que esten repetidos?");
+           letra=Entrada.next().charAt(0);
         } while (respuesta);
        
     }
