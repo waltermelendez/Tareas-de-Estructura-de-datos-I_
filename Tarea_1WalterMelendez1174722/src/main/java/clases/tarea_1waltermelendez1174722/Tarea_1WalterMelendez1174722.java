@@ -1,6 +1,7 @@
 
 
 package clases.tarea_1waltermelendez1174722;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Tarea_1WalterMelendez1174722 {
@@ -126,10 +127,11 @@ public class Tarea_1WalterMelendez1174722 {
         */
         System.out.println("Ejercicio Numero 2");
         int [] numero = new int [5];
-        
+        int cantidad=10;
+       ArrayList <Integer> nue=new ArrayList<>(cantidad);//Se debe de usar array list debido a que los arrays simples porque tiene tama;o fijo.
         int posA=0;
         int posB=0;
-        int menos=5;
+        
         boolean respuesta= true;
         String letra="S";
         numero[0]=1;
@@ -138,35 +140,17 @@ public class Tarea_1WalterMelendez1174722 {
         numero[3]=34;
         numero[4]=34;
         do {
-            
             if (letra=="S") {
-                for (int i = 0; i < 5; i++) {
-                    for (int j = i+1; j < 5; j++) {
-                        if (numero[j]==numero[i]) {
-                            posA=j;
-                            posB=i;
-                            break;
+                for (int i = 0; i < cantidad; i++) {
+                    for (int j = 1; j < cantidad; j++) {
+                        if (nue.get(j)!=nue.get(i)) {
+                            
+                        } else {
                         }
                     }
-                    
                 }
-                if (posA==0&&posB==0) {
-                    System.out.println("No hay numero iguales en el arreglo");    
-                }else{
-                    menos=menos-2;
-                    int [] numero_nuevo=new int [menos];
-                for (int i = 0; i < menos; i++) {
-                    numero_nuevo[i]=numero[i];
-                }
-                    for (int i = 0; i < menos; i++) {
-                        System.out.print(numero_nuevo[i]+" ,");
-                    }
-                }
-                
-            }else if(letra=="N"){
-                System.out.println("Saliendo.....");
-                respuesta=false;
             }
+            
         } while (respuesta);
        
     }
