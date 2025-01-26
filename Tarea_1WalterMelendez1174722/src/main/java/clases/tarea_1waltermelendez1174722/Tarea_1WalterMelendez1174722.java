@@ -13,7 +13,7 @@ public class Tarea_1WalterMelendez1174722 {
         Scanner Entrada= new Scanner (System.in);
         int aux;
         int promedio=0;
-       /* for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
             System.out.println("Diga una nota "+(i+1) );
             Notas[i]=Entrada.nextInt();
         }
@@ -36,12 +36,12 @@ public class Tarea_1WalterMelendez1174722 {
         for (int i = 0; i < 10; i++) {
             promedio=Notas[i]+promedio;
         }
-        promedio=promedio/10
-        System.out.println("El promedio es: "+(promedio));*/
+        promedio=promedio/10;
+        System.out.println("El promedio es: "+(promedio));
        
         //Ejercicio numero 1 con while
         
-       /* System.out.println("Notas con ciclo while");
+        System.out.println("Notas con ciclo while");
         
         int cont=0;
         while (cont<10){
@@ -78,11 +78,11 @@ public class Tarea_1WalterMelendez1174722 {
         cont++;
         }
         promediow=promediow/10;
-        System.out.println("El promedio es de: "+(promediow));*/
+        System.out.println("El promedio es de: "+(promediow));
         
         
         //Ejercicio de Notas con do-while
-     /* int contar=0;
+      int contar=0;
       int contar_aux=0;
       int auxi=0;
         System.out.println("");
@@ -124,7 +124,7 @@ public class Tarea_1WalterMelendez1174722 {
         promedio_d=promedio_d/10;
         System.out.println("El promedio es de: "+promedio_d);
         //Ejercicio Numero 2
-        */
+        
         System.out.println("Ejercicio Numero 2");
         
         int cantidad=10;
